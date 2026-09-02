@@ -89,7 +89,7 @@ class Distribution(object):
                 if package_xml is not None:
                     break
 
-            if final_exception is not None:
+            if final_exception is not None and package_xml is None:
                 raise final_exception
 
             self._release_package_xmls[pkg_name] = package_xml
